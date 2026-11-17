@@ -38,9 +38,11 @@ export default function App() {
   }
 
   function clearCompleted() {
+    // AI-assisted — see AI-USAGE.md #4
     setTodos(todos.filter((t) => !t.done));
   }
 
+  // AI-assisted — see AI-USAGE.md #3
   const visible = todos.filter((t) =>
     filter === "active" ? !t.done : filter === "completed" ? t.done : true,
   );

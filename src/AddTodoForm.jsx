@@ -5,10 +5,8 @@ export default function AddTodoForm({ onAdd }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    
-    // Prevent adding empty todos
+    // AI-assisted — see AI-USAGE.md #2
     if (text.trim() === "") return;
-
     onAdd(text.trim());
     setText("");
   }
@@ -19,6 +17,7 @@ export default function AddTodoForm({ onAdd }) {
         name="text"
         placeholder="Add a todo…"
         value={text}
+        // AI-assisted — see AI-USAGE.md #1
         onChange={(e) => setText(e.target.value)}
       />
       <button type="submit">Add</button>
